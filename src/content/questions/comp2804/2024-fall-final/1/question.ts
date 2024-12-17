@@ -1,31 +1,33 @@
 import type { MultipleChoiceQuestion } from "@common/MultipleChoiceQuestionGenerator";
 
 const body = String.raw`
-  Example Question, what is the meaning of life?
+  Let $X$ be a set of size $n$. How many triples $(A,B,C)$ are there such that 
+  $A \subseteq X, B \subseteq X, C \subseteq X$ and $A, B,$ and $C$ are pairwise disjoint? 
+  (Pairwise disjoint means that $A \cap B = \emptyset$, $B \cap C = \emptyset$, and $A \cap C = \emptyset$).
 `;
 
 const label1 = String.raw`
-  Placeholder Answer 1, $69$
+  $2^n$
 `;
 const label2 = String.raw`
-  Placeholder Answer 2, $420$
+  $3^n$
 `;
 const label3 = String.raw`
-  Placeholder Answer 3, $666$
+  $4^n$
 `;
 const label4 = String.raw`
-  Placeholder Answer 4, $1337$
+  $(2^n)^3$
 `;
 const label5 = String.raw`
-  Placeholder Answer 5, $1738$
+  $(\sum^n_{k=0} \binom{n}{k})^3$
 `;
 
 export const question: MultipleChoiceQuestion = {
   body: body,
   options: [
-    { label: label1, correct: true },
+    { label: label1, correct: false },
     { label: label2, correct: false },
-    { label: label3, correct: false },
+    { label: label3, correct: true },
     { label: label4, correct: false },
     { label: label5, correct: false },
   ],
