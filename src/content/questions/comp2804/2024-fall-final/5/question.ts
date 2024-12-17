@@ -16,17 +16,13 @@ const label3 = String.raw`
 const label4 = String.raw`
   Placeholder Answer 4, $1337$
 `;
-const label5 = String.raw`
-  Placeholder Answer 5, $1738$
-`;
 
 export const question: MultipleChoiceQuestion = {
   body: body,
   options: [
-    { label: label1, correct: true },
+    { label: label1, correct: false },
     { label: label2, correct: false },
     { label: label3, correct: false },
-    { label: label4, correct: false },
-    { label: label5, correct: false },
+    { label: label4, correct: true },
   ],
 };
